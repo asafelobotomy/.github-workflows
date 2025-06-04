@@ -15,8 +15,9 @@ They also manage releases.
 
 ## Maintenance
 
-All directories, including hidden ones, were checked for issues and no
-problems were found. Before making future updates, run the included linting
-workflows (`yamllint`, `markdownlint`, and `proselint`) to catch potential
-errors. Keep Markdown lines under 80 characters and ensure every file ends
-with a newline.
+All directories, including hidden ones, were checked. Yamllint reported
+warnings for missing `---` headers and non-boolean truthy values. Add these
+corrections to workflow files. Before making future updates, run the included
+linting workflows (`yamllint`, `markdownlint`, and `proselint`) to catch
+potential errors. Keep Markdown lines under 80 characters and ensure every
+file ends with a newline.
