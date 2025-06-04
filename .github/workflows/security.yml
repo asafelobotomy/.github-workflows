@@ -1,9 +1,10 @@
 # .github/workflows/security.yml
+---
 name: Security Scan
 
-on:
-  push:
-  pull_request:
+"on":
+  push: {}
+  pull_request: {}
   schedule:
     - cron: '0 0 * * 0'
 
@@ -19,6 +20,6 @@ jobs:
       - name: Initialize CodeQL
         uses: github/codeql-action/init@v3
         with:
-          languages: github-actions
+          languages: javascript
       - name: Perform CodeQL Analysis
         uses: github/codeql-action/analyze@v3
