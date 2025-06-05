@@ -1,7 +1,8 @@
 # .github/workflows/markdownlint.yml
+---
 name: Markdown Lint
 
-on:
+"on":
   push:
     paths: ["**/*.md"]
   pull_request:
@@ -11,7 +12,7 @@ jobs:
   markdownlint:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - uses: DavidAnson/markdownlint-cli2-action@v14
         with:
           globs: '**/*.md'

@@ -1,7 +1,8 @@
 # .github/workflows/proselint.yml
+---
 name: Proselint (Docs Linter)
 
-on:
+"on":
   push:
     paths: ["**/*.md"]
   pull_request:
@@ -11,7 +12,7 @@ jobs:
   prose:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - name: Install proselint
         run: pip install proselint
       - name: Run proselint
