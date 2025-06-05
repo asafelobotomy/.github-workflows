@@ -1,6 +1,8 @@
+# .github/workflows/shellcheck.yml
+---
 name: ShellCheck
 
-on:
+"on":
   push:
     paths:
       - '**/*.sh'
@@ -8,13 +10,13 @@ on:
     paths:
       - '**/*.sh'
 
-jobs:
+  jobs:
   shellcheck:
     name: Shell Script Linting
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Run ShellCheck
         uses: ludeeus/action-shellcheck@v2
